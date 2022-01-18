@@ -1,0 +1,9 @@
+{
+  "name": "projecteuler-exercises",
+  "version": "1.0.0",
+  "description": "Mathematics exercises from Project Euler",
+  "main": "index.js",
+  "repository": "git@github.com:GabrielC01/projecteuler-exercises.git",
+  "author": "GabrielC01 <gabcchaves@zohomail.com>",
+  "license": "MIT"
+}
