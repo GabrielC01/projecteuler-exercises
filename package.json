@@ -1,6 +1,7 @@
 {
   "name": "projecteuler-exercises",
   "version": "1.0.0",
+  "type": "module",
   "description": "Mathematics exercises from Project Euler",
   "main": "index.js",
   "repository": "git@github.com:GabrielC01/projecteuler-exercises.git",
