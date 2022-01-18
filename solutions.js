@@ -4,7 +4,7 @@ import { argv } from 'process';
 var solutions = [];
 
 // Problem 1: Multiples of 3 and 5
-solutions.push(function p1() {
+solutions.push(() => {
 	let sum = 0;
 	for (let i = 3; i < 1000; i++) {
 		if (i % 3 == 0 || i % 5 == 0)
