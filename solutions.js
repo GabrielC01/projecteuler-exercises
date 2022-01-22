@@ -13,6 +13,25 @@ solutions.push(() => {
 	return sum;
 });
 
+solutions.push(() => {
+	function fibo(n) {
+		if (n <= 2) {
+			return n;
+		}
+		return fibo(n - 1) + fibo(n - 2);
+	}
+	
+	let sum = 0;
+	for (let i = 2; sum <= 4*10**6; i++) {
+		if (fibo(i) % 2 == 0) {
+			sum += fibo(i);	
+		}
+	}
+	return sum;
+});
+
+
+// CLI argument handling
 if (argv.length <= 2) {
 	console.log('Please, inform the number that corresponds to the problem.');
 	console.log('Check the list of problems on projecteuler.net');
