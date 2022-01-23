@@ -1,9 +1,22 @@
 import { argv } from 'process';
 // Each function correspond to the solution of a problem
 
+// Utilities
+const util = {
+	isPrime: function (number) {
+		if ([2, 3, 5].indexOf(number) >= 0) return true;
+		for (let i = 2; i <= Math.trunc(number / 2); i++) {
+			if (number % i == 0) return false;
+		}
+		return true;
+	}
+}
+
+// Store all the functions that solve the problems in an array
 var solutions = [];
 
-// Problem 1: Multiples of 3 and 5
+// Problems //
+// Multiples of 3 and 5
 solutions.push(() => {
 	let sum = 0;
 	for (let i = 3; i < 1000; i++) {
@@ -13,6 +26,7 @@ solutions.push(() => {
 	return sum;
 });
 
+// Even fibonacci numbers
 solutions.push(() => {
 	function fibo(n) {
 		if (n <= 2) {
@@ -28,6 +42,20 @@ solutions.push(() => {
 		}
 	}
 	return sum;
+});
+
+// Largest prime factor
+solutions.push(() => {
+	var number = 600851475143;
+	var numberHalf = Math.trunc(number / 2);
+	var largestPrimeFactor = 0;
+	// A number can't be divide by more than its half, unless by itself
+	for (let factor = 2; factor <= numberHalf; factor++) {
+		if (number % factor == 0 && util.isPrime(factor))
+			largestPrimeFactor = factor;
+		console.log(factor);
+	}
+	return largestPrimeFactor;
 });
 
 
