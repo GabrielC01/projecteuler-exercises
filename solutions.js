@@ -58,6 +58,21 @@ solutions.push(() => {
 	return largestPrimeFactor;
 });
 
+// Largest palindrome product
+solutions.push(() => {
+	var largestPalindromeProduct = undefined;
+	for (let i = 100; i < 1000; i++) {
+		for (let j = 100; j < 1000; j++) {
+			let numStr = (i * j).toString();
+			let revNumStr = numStr.split('').reverse().join('');
+			if (numStr == revNumStr) {
+				largestPalindromeProduct = i * j;
+			}
+		}
+	}
+	return largestPalindromeProduct;
+});
+
 
 // CLI argument handling
 if (argv.length <= 2) {
@@ -69,5 +84,6 @@ if (argv.length <= 2) {
 		console.log('Solution: ' + solutions[argv[2]-1]());
 	} catch (e) {
 		console.log('Solution not found');
+		console.log('\n' + e);
 	}
 }
