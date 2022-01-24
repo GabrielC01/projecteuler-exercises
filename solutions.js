@@ -73,6 +73,16 @@ solutions.push(() => {
 	return largestPalindromeProduct;
 });
 
+// Smallest multiple
+solutions.push(() => {
+	for (let number = 40;; number++) {
+		for (let i = 1; i <= 20; i++) {
+			if (number % i != 0) break;
+			else if (i == 20) return number;
+		}
+	}
+});
+
 
 // CLI argument handling
 if (argv.length <= 2) {
