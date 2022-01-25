@@ -95,6 +95,15 @@ solutions.push(() => {
 	return Math.abs(squaresSum - sumSquare);
 });
 
+// 10001st prime
+solutions.push(() => {
+	var index = 1;
+	for (let i = 3; index < 10001; i += 2) {
+		if (util.isPrime(i)) index++;
+		if (index == 10001) return i;
+	}
+});
+
 
 // CLI argument handling
 if (argv.length <= 2) {
