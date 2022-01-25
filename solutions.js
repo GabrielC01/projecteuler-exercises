@@ -83,6 +83,18 @@ solutions.push(() => {
 	}
 });
 
+// Sum square difference
+solutions.push(() => {
+	var squaresSum = 0;
+	var sumSquare = 0;
+	for (let i = 1; i <= 100; i++) {
+		squaresSum += i**2;
+		sumSquare += i;
+	}
+	sumSquare **= 2;
+	return Math.abs(squaresSum - sumSquare);
+});
+
 
 // CLI argument handling
 if (argv.length <= 2) {
