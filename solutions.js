@@ -119,6 +119,16 @@ solutions.push(() => {
 	return largestProduct;
 });
 
+solutions.push(() => {
+	let c;
+	for (let b = 1; b <= 1000; b++) {
+		for (let a = 1; a <= 1000; a++) {
+			c = 1000 - a - b;
+			if (c**2 == a**2 + b**2)
+				return a * b * c;
+		}
+	}
+});
 
 // CLI argument handling
 if (argv.length <= 2) {
