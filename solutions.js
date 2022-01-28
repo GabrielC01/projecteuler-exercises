@@ -119,6 +119,7 @@ solutions.push(() => {
 	return largestProduct;
 });
 
+// Special Pythagorean triplet
 solutions.push(() => {
 	let c;
 	for (let b = 1; b <= 1000; b++) {
@@ -129,6 +130,7 @@ solutions.push(() => {
 		}
 	}
 });
+
 
 // CLI argument handling
 if (argv.length <= 2) {
