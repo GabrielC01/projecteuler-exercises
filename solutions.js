@@ -131,6 +131,14 @@ solutions.push(() => {
 	}
 });
 
+// Summation of primes
+solutions.push(() => {
+	let summation = 2;
+	for (let i = 3; i < 2*10**6; i += 2) {
+		if (util.isPrime(i)) summation += i;
+	}
+	return summation;
+});
 
 // CLI argument handling
 if (argv.length <= 2) {
